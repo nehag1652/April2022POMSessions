@@ -1,7 +1,5 @@
 package com.qa.opencart.test;
 
-import java.io.Serial;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +11,6 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import io.qameta.allure.Story;
-import net.bytebuddy.build.HashCodeAndEqualsPlugin.Enhance;
 
 
 @Epic("Epic-100:Design the login page feature for open cart application")
