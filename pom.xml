@@ -89,7 +89,11 @@
 			<version>1.9.5</version>
 		</dependency>
 
-
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -109,11 +113,19 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.1</version>
+					<version>3.7.0</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
+						<annotationProcessorPaths>
+							<path>
+								<groupId>org.projectlombok</groupId>
+								<artifactId>lombok</artifactId>
+								<version>1.18.16</version>
+							</path>
+						</annotationProcessorPaths>
 					</configuration>
+
 				</plugin>
 
 				<plugin>
@@ -125,7 +137,7 @@
 						<argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
 						<suiteXmlFiles>
 							<suiteXmlFile>src/test/resources/TestRunner/testng_regression.xml</suiteXmlFile>
-							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+
 
 						</suiteXmlFiles>
 
@@ -136,6 +148,8 @@
 					</configuration>
 
 				</plugin>
+
+
 				<plugin>
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>3.0.2</version>
